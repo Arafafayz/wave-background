@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    height: 100vh;
+}
+
+.page::before {
+    content: "";
+    position: fixed;
+    width: 250%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0075ff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    animation: waving 5s ease-in-out infinite alternate;
+
+
+}
+
+@keyframes waving {
+    from {
+        transform: translateX(-50%) skew(0, -10deg);
+    }
+
+    to {
+        transform: translateX(-30%) skew(10deg, 0deg);
+    }
+
+}
+
+.card {
+    width: 300px;
+    padding: 10px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+
+.card h2 {
+font-weight: 100;
+}
+
+.card p {
+font-weight: 100;
+}
